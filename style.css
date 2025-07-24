@@ -51,12 +51,15 @@ header {
     color: var(--text-dark);
     font-weight: 600;
     padding: 0 !important;
-    margin: 1rem 1.5rem !important;
+    margin-top: 1rem !important;
+    margin-left: 1.7rem !important;
     transition: all 0.3s ease;
 }
 .nav-link:hover {
     transform: scale(1.05);
     color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+    border-bottom: solid 2px var(--primary-color);
 }
 .delivery-icon img{
     width: 24px;
@@ -69,6 +72,7 @@ header {
     border: solid 2px var(--text-dark);
     border-radius: 100%;
     padding: 10px;
+    margin: auto;
 
 }
 .delivery-icon:hover {
@@ -81,13 +85,35 @@ header {
 .active_link {
     border-bottom: 2px solid var(--primary-color);
 }
-
+.open-sidebar {
+    display: none;
+    background:none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+.close-sidebar {
+    display: none;
+    background:none;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
 
 /* ======Header Section Start====== */
 .main-header-content {
     gap: 2rem;
     overflow: hidden;
-    margin-top: 120px; /* Adjusted for fixed header */
+    margin-top: 120px; 
     margin-left: 65px;
 }
 .main-header-content img {
@@ -112,8 +138,12 @@ header {
     margin-bottom: 2rem;
 }
 .header-content{
+    max-height: 100%;
     max-width: 50%;
     text-align: justify;
+}
+.header-content h1{
+    animation: fadeIn 1.7s ease-in , slideInup 1.5s ease-in-out;
 }
 .header-content p{
     font-size: 1.2rem;
@@ -122,4 +152,116 @@ header {
     margin-bottom: 1.5rem;
     width: 100%;
     font-weight: 400;
+    animation: fadeIn 1.7s ease-in, slideInup 1.7s ease-in-out;
+}
+.header-content button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.7s ease-in, slideInup 1.9s ease-in-out;
+}
+.header-content button:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-color);
+    color: black;
+    box-shadow: 0 5px 8px #db6e09;
+}
+.header-image{
+    animation: fadeIn 1s ease-in , slideIn 1.5s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(+100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInup {
+    from {
+        transform: translateY(+100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@media screen and (max-width:850px){
+    .open-sidebar, .close-sidebar {
+        display: block;
+    }
+    header {
+        background-color: var(--primary-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        margin-right: 0 !important;
+    }
+    #icon {
+        margin-right: 0;
+    }
+    #Main-Icon {
+        color: var(--primary-color-light) !important;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(12.5rem, 100%);
+        z-index: 10;
+        border-left: 1px solid var(--text-dark);
+        background-color: var(--white);
+    }
+    nav.show {
+        right: 0;
+    }
+    nav.show ~ .overlay{
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+    .nav-link {
+        color: var(--primary-color);
+        margin-left: 1rem !important;
+        margin-top: 1.5rem !important;
+        width: 100%;
+        padding: 0.5rem 0 !important;
+        font-size: 1.1rem;
+        border: none;
+    }
+    .nav-link:hover {
+        color: var(--white);
+        transform: scale(1);
+        text-shadow: none;
+        border-bottom: none;
+        background-color: var(--primary-color-dark);
+        padding-left: 1rem !important;
+    }
+    .delivery-icon {
+        display: none;
+    }
+
 }

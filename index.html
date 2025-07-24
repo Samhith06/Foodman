@@ -8,33 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between px-5 py-2 mb-4"> 
-        <div class="col-md-3 mb-2 mb-md-0 main-logo"> 
+    <header class="d-flex flex-nowrap align-items-center justify-content-center justify-content-md-between px-5 py-2 mb-4"> 
+        <div class="col-md-3 mb-2 mb-md-0 main-logo d-flex align-items-center justify-content-center " id="Icon"> 
             <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none" id="Main-Icon">Food<span id="Secondary-Icon">Man</span></a> 
-        </div> 
-        <ul class="nav col-12 col-md-auto  mb-2 justify-content-center mb-md-0 text-decoration-none">  
-            <li><a href="#" class="nav-link mx-2 active_link">Home</a>
-            </li> <li><a href="#" class="nav-link px-2">Special</a></li> 
-            <li><a href="#" class="nav-link px-2">Chef</a></li> 
-            <li><a href="#" class="nav-link px-2">Clients</a></li> 
-            <li><a href="#" class="nav-link px-2">Contact Us</a></li> 
-        </ul> 
-        <div class="col-md-3 text-end"> 
+        </div>
+        <button class="open-sidebar btn " onclick="opensidebar()">
+            <img src="./Icons/menu.svg" alt="Menu Icon" class="src"></img>
+        </button>
+        <nav id="navbar">
+            <ul class="nav col-12 col-md-auto  mb-2 justify-content-center mb-md-0 text-decoration-none">
+                <li><button class="close-sidebar btn" onclick="closesidebar()" ><img src="./Icons/close.svg" alt="Close Icon" height="40px" width="40px"></img></button></li>
+                <li><a href="#" class="nav-link mx-2 active_link">Home</a></li> 
+                <li><a href="#" class="nav-link px-2">Special</a></li> 
+                <li><a href="#" class="nav-link px-2">Chef</a></li> 
+                <li><a href="#" class="nav-link px-2">Clients</a></li> 
+                <li><a href="#" class="nav-link px-2">Contact Us</a></li> 
+            </ul>
+        </nav>
+        <div class="col-md-3 d-flex justify-content-end align-items-center Delivey-icon-section"> 
             <a href="#" class="delivery-icon"><img src="./Icons/moped.svg" alt="" class="src"></a>
         </div> 
     </header>
+    <div class="overlay" onclick="closesidebar()"></div>
     <section class="main-header-content d-flex flex-row align-items-center justify-content-center text-center">
        
         <div class="header-content">
             <h1>Meet, Eat & Enjoy The <span>True Taste</span>.</h1>
             <p class="section-description">Discover the true essence of culinary delight as you meet eat and savor the authentic flavors that define our passion for food.</p>
+            <button class="btn btn-lg">Order Now</button>
         </div>
          <div class="header-image">
             <img src="./Images/pic1.png" alt="Food">
         </div>
-        
+    </section>
+    <section class="special-dish" id="special-dish">
+
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
