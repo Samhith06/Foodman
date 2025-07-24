@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 :root{
     --primary-color: #fc7f09;
-    --primary-color-light: #fffcfa;
+    --primary-color-light: #ffffff;
     --primary-color-dark: #db6e09;
     --text-dark: #18181b;
     --text-light: #6b7280;
@@ -26,12 +27,14 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 .main-logo {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+
 }
 #Main-Icon {
+    font-weight: 800;
     color: var(--primary-color) !important;
     text-decoration: none;
     transition: 0.3s ease;
@@ -40,14 +43,16 @@ header {
     transform: scale(1.1);
 }
 #Secondary-Icon {
+    font-weight: 700;
     color: var(--text-dark) !important;
 }
 .nav-link {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 600;
-    padding: 1rem 1.5rem !important;
-    transition: 0.3s ease;
+    padding: 0 !important;
+    margin: 1rem 1.5rem !important;
+    transition: all 0.3s ease;
 }
 .nav-link:hover {
     transform: scale(1.05);
@@ -72,4 +77,49 @@ header {
 .delivery-icon:hover img {
     filter: invert(1);
     transform: scale(1.1);
+}
+.active_link {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* ======Header Section Start====== */
+.main-header-content {
+    gap: 2rem;
+    overflow: hidden;
+    margin-top: 120px; /* Adjusted for fixed header */
+    margin-left: 65px;
+}
+.main-header-content img {
+    max-width: 600px;
+    margin-inline: auto;
+    border-radius: 100%;
+}
+.main-header-content h1 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: var(--text-dark);
+    text-align: left;
+    width: 80%;
+
+}
+.main-header-content h1 span{
+    color: var(--primary-color);
+}
+.main-header-content .section-description{
+    margin-bottom: 2rem;
+}
+.header-content{
+    max-width: 50%;
+    text-align: justify;
+}
+.header-content p{
+    font-size: 1.2rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    font-weight: 400;
 }
