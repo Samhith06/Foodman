@@ -6,6 +6,7 @@
     <title>FoodMan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="d-flex flex-nowrap align-items-center justify-content-center justify-content-md-between px-5 py-2 mb-4"> 
@@ -19,7 +20,7 @@
             <ul class="nav col-12 col-md-auto  mb-2 justify-content-center mb-md-0 text-decoration-none">
                 <li><button class="close-sidebar btn" onclick="closesidebar()" ><img src="./Icons/close.svg" alt="Close Icon" height="40px" width="40px"></img></button></li>
                 <li><a href="#" class="nav-link mx-2 active_link">Home</a></li> 
-                <li><a href="#" class="nav-link px-2">Special</a></li> 
+                <li><a href="#special-dish-section" class="nav-link px-2">Special</a></li> 
                 <li><a href="#" class="nav-link px-2">Chef</a></li> 
                 <li><a href="#" class="nav-link px-2">Clients</a></li> 
                 <li><a href="#" class="nav-link px-2">Contact Us</a></li> 
@@ -29,7 +30,10 @@
             <a href="#" class="delivery-icon"><img src="./Icons/moped.svg" alt="" class="src"></a>
         </div> 
     </header>
-    <div class="overlay" onclick="closesidebar()"></div>
+    <div class="overlay" id="overlay" onclick="closesidebar()"></div>
+
+
+    
     <section class="main-header-content d-flex flex-row align-items-center justify-content-center text-center">
        
         <div class="header-content">
@@ -41,8 +45,63 @@
             <img src="./images/pic1.png" alt="Food">
         </div>
     </section>
-    <section class="special-dish" id="special-dish">
 
+
+
+    <section class="special-dish-section" id="special-dish-section">
+        <div class="special-dish" id="Special-dish">
+            <div class="special-dish-heading text-center">
+            <h2>Our Special Dishes</h2>
+            <p>Each dish promises an unforgettable dining experience, blending innovation with tradition to delight your senses.</p>
+            </div>
+        </div>
+        <div class="menu-cards">
+            <div class="card" style="width: 19rem;">
+                <img src="./images/card1.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Chicken Salad</h5>
+                    <p class="card-text">Shredded or diced chicken tossed with crisp lettuce, juicy tomatoes, cucumbers, and onions, dressed in a creamy mayo or tangy vinaigrette for a refreshing, protein-packed dish bursting with flavor and crunch.</p>
+                    <div class="stars mb-2 ">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="#" class="btn btn-primary card-button">Add to Cart</a>
+                </div>
+            </div>
+            <div class="card" style="width: 19rem;">
+                <img src="./images/card2.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Chicken Pasta</h5>
+                    <p class="card-text">Tender chicken pieces sautéed with garlic and herbs, then tossed with al dente pasta in a rich, creamy sauce or zesty tomato base, blended with veggies like bell peppers and spinach for a satisfying, flavorful meal.</p>
+                    <div class="stars mb-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="#" class="btn btn-primary card-button">Add to Cart</a>
+                </div>
+            </div>
+            <div class="card" style="width: 19rem;">
+                <img src="./images/card3.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Lasagna</h5>
+                    <p class="card-text">Layers of pasta sheets stacked with seasoned ground meat, rich tomato sauce, creamy béchamel, and melted cheese, baked to golden perfection for a hearty, comforting Italian classic full of bold, savory flavor.</p>
+                    <div class="stars text mb-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="#" class="btn btn-primary card-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

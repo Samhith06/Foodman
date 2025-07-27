@@ -6,9 +6,8 @@
     --text-dark: #18181b;
     --text-light: #6b7280;
     --white: #ffffff;
-    --max-width: 1200px;
+    --max-width: 1400px;
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -113,8 +112,8 @@ header {
 .main-header-content {
     gap: 2rem;
     overflow: hidden;
-    margin-top: 120px; 
-    margin-left: 65px;
+    padding: 2%;
+    margin: 10% 8% 10% 8%;
 }
 .main-header-content img {
     max-width: 600px;
@@ -241,6 +240,7 @@ header {
         z-index: 10;
         border-left: 1px solid var(--text-dark);
         background-color: var(--white);
+        transition: right 300ms ease-out;
     }
     nav.show {
         right: 0;
@@ -279,19 +279,23 @@ header {
         gap: 1rem;
         margin-top: 120px;
         justify-content: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 12%;
+        text-align: center;
     }
     .main-header-content img{
         max-width: 500px;
-        width: 80%;
-        height: 80%;
+        width: 85%;
+        height: 85%;
 
     }
     .main-header-content h1{
         font-size: 3rem;
-        text-align: center;
+        text-align: left;
     }
     .header-content{
-        margin-bottom: 50px;
+        margin-bottom: 2%;
         max-width: 100%;
         padding: 30px;
     }
@@ -304,4 +308,97 @@ header {
     .header-content button{
         animation: fadeIn 1.7s ease-in, slideIn 1.7s ease-in-out;
     }
+}
+@media (width> 1290px) {
+  .main-header-content {
+    margin-top: 120px;
+    margin-left: 10%;
+    margin-bottom: 120px;
+    margin-right: 10% !important;
+    width: 100%;
+  }
+}
+
+
+/* ======Hero Section Start====== */
+.special-dish-section {
+    padding: 2%;
+    margin: 10% 8% 10% 8%;
+}
+.special-dish-heading h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+.special-dish-heading p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin-left: 205px;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+.menu-cards{
+    display:inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-left: 1.2rem;
+}
+.menu-cards img{
+    border-radius: 10px; 
+    width: 19rem;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.menu-cards h5{
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: var(--text-dark);    
+}
+.menu-cards p{
+    text-align: left;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+}
+.card-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card-button:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-color);
+    color: black;
+    box-shadow: 0 5px 8px #db6e09;
+}
+.star{
+    margin-left: 5px;
+
+}
+.stars i {
+    color: goldenrod;
+    font-size: 1rem;
+}
+
+
+@media screen and (max-width: 850px) {
+    .special-dish-heading p{
+        max-width: 100%;
+        margin-left: 0;
+    }
+    .menu-cards {
+        grid-template-columns: 1fr;
+    }
+
 }
