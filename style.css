@@ -195,6 +195,14 @@ header {
         transform: translateX(0);
     }
 }
+@keyframes slideInleft {
+    from{
+        transform:translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
 @keyframes slideInup {
     from {
         transform: translateY(+100%);
@@ -206,6 +214,9 @@ header {
 @media screen and (max-width:850px){
     .open-sidebar, .close-sidebar {
         display: block;
+    }
+    body{
+        text-align: center;
     }
     header {
         background-color: var(--primary-color);
@@ -263,5 +274,34 @@ header {
     .delivery-icon {
         display: none;
     }
+    .main-header-content{
+        flex-direction: column !important;
+        gap: 1rem;
+        margin-top: 120px;
+        justify-content: center;
+    }
+    .main-header-content img{
+        max-width: 500px;
+        width: 80%;
+        height: 80%;
 
+    }
+    .main-header-content h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .header-content{
+        margin-bottom: 50px;
+        max-width: 100%;
+        padding: 30px;
+    }
+    .header-content h1{
+        animation: fadeIn 1.7s ease-in, slideIn 1.7s ease-in-out;
+    }
+    .header-content p{
+        animation: fadeIn 1.7s ease-in, slideInleft 1.7s ease-in-out;
+    }
+    .header-content button{
+        animation: fadeIn 1.7s ease-in, slideIn 1.7s ease-in-out;
+    }
 }
