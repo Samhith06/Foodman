@@ -339,6 +339,7 @@ header {
     margin-left: 205px;
     color: #6b7280;
     margin-bottom: 2rem;
+
 }
 .menu-cards{
     display:inline-grid;
@@ -364,6 +365,7 @@ header {
     letter-spacing: 0.5px;
     word-spacing: 1px;
 }
+
 .card-button {
     background-color: var(--primary-color);
     color: var(--white);
@@ -384,14 +386,20 @@ header {
 }
 .star{
     margin-left: 5px;
-
 }
 .stars i {
     color: goldenrod;
     font-size: 1rem;
 }
+.card{
+    border-color: transparent;
+    border-radius: 20px;
+}
 
-
+.card:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.005);
+}
 @media screen and (max-width: 850px) {
     .special-dish-heading p{
         max-width: 100%;
@@ -400,5 +408,11 @@ header {
     .menu-cards {
         grid-template-columns: 1fr;
     }
-
+    .special-dish-heading h2{
+    font-size: 2.3rem;
+    }
+    .special-dish-heading{
+        
+        margin-top: 2rem;
+    }
 }

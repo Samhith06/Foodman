@@ -1,0 +1,71 @@
+.menu-section{
+    padding: 2% 2% 2% 0;
+    margin: 10% 8% 10% 8%;
+}
+.menu-heading h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+.menu-heading p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin-left: 205px;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+.menu-cards{
+    display:inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: auto;
+    margin-left: 1.2rem;
+}
+.menu-section .Menu-selection-Beverages{
+    background-image: url(../../images/menu/drinks1.1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+.menu-section .Menu-selection-food{
+    background-image: url(../../images/menu/Food.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+.menu-section .Menu-selection-Snacks{
+    background-image: url(../../images/menu/Snacks\ \(1\).jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+.menu-section .Menu-selection-Deserts{
+    background-image: url(../../images/menu/Deserts.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+.Menu-Types{
+    color: white !important;
+}
+@media screen and (max-width:850px){
+  .menu-cards {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    margin-left: 0;
+  }
+  .menu-heading p{
+    margin-left: 0;
+    margin-bottom: 5%;
+  }
+}

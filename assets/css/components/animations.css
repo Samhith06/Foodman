@@ -1,0 +1,40 @@
+/* ====== Animations Component ====== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(+100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInleft {
+    from{
+        transform:translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes slideInup {
+    from {
+        transform: translateY(+100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.fade-img {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.fade-img.loaded {
+  opacity: 1;
+} 

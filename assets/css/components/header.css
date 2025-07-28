@@ -1,0 +1,88 @@
+/* ====== Header Component ====== */
+header {
+    background-color: var(--primary-color-light);
+    color: var(--text-dark);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+.main-logo {
+    font-size: 2.5rem;
+}
+#Main-Icon {
+    font-weight: 800;
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+#Main-Icon:hover {
+    transform: scale(1.1);
+}
+#Secondary-Icon {
+    font-weight: 700;
+    color: var(--text-dark) !important;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 0 !important;
+    margin-top: 1rem !important;
+    margin-left: 1.7rem !important;
+    transition: all 0.3s ease;
+}
+.nav-link:hover {
+    transform: scale(1.05);
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+    border-bottom: solid 2px var(--primary-color);
+}
+.active_link {
+    border-bottom: 2px solid var(--primary-color);
+}
+.delivery-icon img{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+.delivery-icon {
+    margin-right: 20px;
+    border: solid 2px var(--text-dark);
+    border-radius: 100%;
+    padding: 10px;
+    margin: auto;
+}
+.delivery-icon:hover {
+    background-color: var(--primary-color);
+}
+.delivery-icon:hover img {
+    filter: invert(1);
+    transform: scale(1.1);
+}
+.open-sidebar {
+    display: none;
+    background:none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+.close-sidebar {
+    display: none;
+    background:none;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+} 

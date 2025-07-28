@@ -1,0 +1,10 @@
+/* ====== CSS Variables ====== */
+:root{
+    --primary-color: #fc7f09;
+    --primary-color-light: #ffffff;
+    --primary-color-dark: #db6e09;
+    --text-dark: #18181b;
+    --text-light: #6b7280;
+    --white: #ffffff;
+    --max-width: 1400px;
+} 

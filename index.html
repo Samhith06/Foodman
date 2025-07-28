@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodMan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -14,20 +14,20 @@
             <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none" id="Main-Icon">Food<span id="Secondary-Icon">Man</span></a> 
         </div>
         <button class="open-sidebar btn " onclick="opensidebar()">
-            <img src="Icons/menu.svg" alt="Menu Icon" class="src"></img>
+            <img src="assets/images/icons/menu.svg" alt="Menu Icon" class="src fade-img" loading="lazy"></img>
         </button>
         <nav id="navbar">
             <ul class="nav col-12 col-md-auto  mb-2 justify-content-center mb-md-0 text-decoration-none">
-                <li><button class="close-sidebar btn" onclick="closesidebar()" ><img src="./Icons/close.svg" alt="Close Icon" height="40px" width="40px"></img></button></li>
+                <li><button class="close-sidebar btn" onclick="closesidebar()" ><img src="assets/images/icons/close.svg" alt="Close Icon" height="40px" width="40px" class="fade-img" loading="lazy"></img></button></li>
                 <li><a href="#" class="nav-link mx-2 active_link">Home</a></li> 
                 <li><a href="#Special-dish-section" class="nav-link px-2">Special</a></li> 
-                <li><a href="#" class="nav-link px-2">Chef</a></li> 
+                <li><a href="#" class="nav-link px-2">Menu</a></li> 
                 <li><a href="#" class="nav-link px-2">Clients</a></li> 
                 <li><a href="#" class="nav-link px-2">Contact Us</a></li> 
             </ul>
         </nav>
         <div class="col-md-3 d-flex justify-content-end align-items-center Delivey-icon-section"> 
-            <a href="#" class="delivery-icon"><img src="./Icons/moped.svg" alt="" class="src"></a>
+            <a href="#" class="delivery-icon"><img src="assets/images/icons/moped.svg" alt="" class="src fade-img" loading="lazy"></a>
         </div> 
     </header>
     <div class="overlay" id="overlay" onclick="closesidebar()"></div>
@@ -42,12 +42,11 @@
             <button class="btn btn-lg">Order Now</button>
         </div>
          <div class="header-image">
-            <img src="images/pic1.png" alt="Food">
+            <img src="assets/images/hero/pic1.png" alt="Food" class="fade-img" loading="lazy">
         </div>
     </section>
 
-
-
+<!-- Special Dish Section -->
     <section class="special-dish-section" id="Special-dish-section">
         <div class="special-dish" id="Special-dish">
             <div class="special-dish-heading text-center">
@@ -57,10 +56,13 @@
         </div>
         <div class="menu-cards">
             <div class="card" style="width: 19rem;">
-                <img src="images/card1.jpeg" class="card-img-top" alt="...">
+                <img src="assets/images/menu/card1.jpeg" class="card-img-top fade-img" alt="..." loading="lazy">
                 <div class="card-body">
                     <h5 class="card-title text-center">Chicken Salad</h5>
                     <p class="card-text">Shredded or diced chicken tossed with crisp lettuce, juicy tomatoes, cucumbers, and onions, dressed in a creamy mayo or tangy vinaigrette for a refreshing, protein-packed dish bursting with flavor and crunch.</p>
+                    <div class="price-tag mb-2">
+                        <span class="price">$12.99</span>
+                    </div>
                     <div class="stars mb-2 ">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -72,10 +74,13 @@
                 </div>
             </div>
             <div class="card" style="width: 19rem;">
-                <img src="images/card2.jpeg" class="card-img-top" alt="...">
+                <img src="assets/images/menu/card2.jpeg" class="card-img-top fade-img" alt="..." loading="lazy">
                 <div class="card-body">
                     <h5 class="card-title text-center">Chicken Pasta</h5>
                     <p class="card-text">Tender chicken pieces sautéed with garlic and herbs, then tossed with al dente pasta in a rich, creamy sauce or zesty tomato base, blended with veggies like bell peppers and spinach for a satisfying, flavorful meal.</p>
+                    <div class="price-tag mb-2">
+                        <span class="price">$15.99</span>
+                    </div>
                     <div class="stars mb-2">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -87,10 +92,13 @@
                 </div>
             </div>
             <div class="card" style="width: 19rem;">
-                <img src="images/card3.jpeg" class="card-img-top" alt="...">
+                <img src="assets/images/menu/card3.jpeg" class="card-img-top fade-img" alt="..." loading="lazy">
                 <div class="card-body">
                     <h5 class="card-title text-center">Lasagna</h5>
                     <p class="card-text">Layers of pasta sheets stacked with seasoned ground meat, rich tomato sauce, creamy béchamel, and melted cheese, baked to golden perfection for a hearty, comforting Italian classic full of bold, savory flavor.</p>
+                    <div class="price-tag mb-2">
+                        <span class="price">$18.99</span>
+                    </div>
                     <div class="stars text mb-2">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -104,7 +112,32 @@
         </div>
     </section>
 
+<!-- Menu Section -->
+ <section class="menu-section" id="Menu-section">
+    <div class="menu-heading text-center">
+        <h2 class="mb-4">Our Menu</h2>
+        <p class="">Explore our diverse menu, featuring a wide range of dishes to suit every taste and occasion.</p>
+    </div>
+    <div class="menu-cards d-inline-grid">
+        <div class="card Menu-selection-food" style="width: 15rem;">
+           <div class="card-body text-center d-flex flex-row justify-content-center align-items-center">
+                <h5 class="Menu-Types">Food</h5>
+            </div>
+        </div>
+        <div class="card Menu-selection-Deserts" style="width: 15rem;">
+            <div class="card-body text-center d-flex flex-row justify-content-center align-items-center">
+                <h5 class="Menu-Types">Deserts</h5>
+            </div>
+        </div>
+        <div class="card Menu-selection-Beverages" style="width: 15rem;">
+            <div class="card-body text-center d-flex flex-row justify-content-center align-items-center">
+                <h5 class="Menu-Types">Beverages</h5>
+            </div>    
+        </div>
+    </div>
+ </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
