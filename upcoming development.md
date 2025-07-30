@@ -125,3 +125,61 @@ GET https://maps.googleapis.com/maps/api/place/details/json?place_id=PLACE_ID&fi
 - Replace `YOUR_GOOGLE_API_KEY` with your actual key.
 - You can use this code in Node.js, or adapt it for the browser (with CORS handling).
 - For each restaurant, if you want reviews or more details, make a follow-up request to the Place Details API using the `place_id`. 
+
+---
+
+# Upcoming Development: Role-Based Access Control (RBAC) & Order Management
+
+## Overview
+Role-Based Access Control (RBAC) allows different users (e.g., "user", "admin") to have different permissions. For your scenario:
+- **User**: Can add items to cart and place orders.
+- **Admin/Restaurant**: Can view all orders placed by users.
+
+## Feasibility with Current Project
+Currently, this project is a **static website** (HTML, CSS, JS only, no backend/server code). There is no backend or database.
+
+### Limitations of Static Sites
+- No server or database to store orders or manage users.
+- All logic runs in the browser, so any "admin" page could be accessed by anyone who knows the URL.
+- No way to persist orders for admins to see, except maybe in localStorage (which is per-user, not shared).
+
+## What is Needed for RBAC & Order Management?
+You need a **backend** (server-side code) and a **database**. Here’s how it would work:
+1. **User Authentication**: Users log in (with username/password or social login).
+2. **Role Assignment**: Each user has a role ("user" or "admin").
+3. **Order Submission**: When a user places an order, it’s sent to the backend and stored in a database.
+4. **Admin Dashboard**: Admins log in and see all orders from all users.
+5. **Access Control**: Backend checks user roles before showing data or allowing actions.
+
+## How to Add This to Your Project
+1. **Add a Backend**
+   - Node.js (Express), Python (Flask, Django), PHP, Ruby, etc.
+2. **Add a Database**
+   - MongoDB, MySQL, PostgreSQL, etc.
+3. **Implement Authentication**
+   - Use libraries like Passport.js (Node), Django Auth, etc.
+4. **Connect Frontend to Backend**
+   - Use AJAX/fetch in your JS to send/receive data from the backend.
+5. **Protect Admin Routes**
+   - Only allow users with the "admin" role to access the admin dashboard and see orders.
+
+## Example Tech Stack
+- **Frontend**: Your current HTML/CSS/JS
+- **Backend**: Node.js + Express
+- **Database**: MongoDB
+- **Authentication**: Passport.js (with roles)
+- **API**: REST endpoints for orders, users, etc.
+
+## What You Can Do Right Now
+- You can simulate a cart and orders in localStorage, but only the current user will see their orders.
+- You cannot have a real admin dashboard or RBAC without a backend.
+
+## Next Steps
+If you want to add real RBAC and order management:
+1. Decide on a backend language (Node.js is popular and works well with JS).
+2. Set up a simple backend server.
+3. Add user authentication and roles.
+4. Create API endpoints for orders.
+5. Update your frontend to interact with the backend.
+
+--- 

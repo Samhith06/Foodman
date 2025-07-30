@@ -56,7 +56,13 @@
     height: 200px;
 }
 .Menu-Types{
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 600 !important;
+    font-size: 2rem !important;
+    transition: transform 0.3s ease;
+}
+.Menu-Types:hover{
+    transform: scale(1.1);
 }
 @media screen and (max-width:850px){
   .menu-cards {
