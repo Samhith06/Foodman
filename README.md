@@ -105,8 +105,8 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👨‍💻 Author
 
 **FoodMan Restaurant**
-- Website: [Your Website]
-- Email: [Your Email]
+- Website: https://samhith06.github.io/Foodman/
+- Email: Samhith06@gmail.com
 
 ---
 
